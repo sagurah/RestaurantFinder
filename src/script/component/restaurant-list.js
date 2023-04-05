@@ -1,20 +1,20 @@
-import './restaurant-item.js'
+import "./restaurant-item.js";
 
-class RestaurantList extends HTMLElement{
-    constructor(){
-        super()
-        this.shadowDOM = this.attachShadow({
-            mode: 'open'
-        })
-    }
+class RestaurantList extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({
+      mode: "open",
+    });
+  }
 
-    set restaurants(restaurants = []){
-        this._restaurants = restaurants
-        this.render()
-    }
+  set restaurants(restaurants = []) {
+    this._restaurants = restaurants;
+    this.render();
+  }
 
-    renderError(message){
-        this.shadowDOM.innerHTML = `
+  renderError(message) {
+    this.shadowDOM.innerHTML = `
         <style>
             .placeholder{
                 font-weight: lighter;
@@ -25,18 +25,18 @@ class RestaurantList extends HTMLElement{
                 user-select: none;
             }
         </style>
-        `
-        this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`
-    }
+        `;
+    this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`;
+  }
 
-    render(){
-        this.shadowDOM.innerHTML = ''
-        this._restaurants.forEach(restaurant => {
-            const item = document.createElement('restaurant-item')
-            item.restaurant = restaurant
-            this.shadowDOM.appendChild(item)
-        })
-    }
+  render() {
+    this.shadowDOM.innerHTML = "";
+    this._restaurants.forEach((restaurant) => {
+      const item = document.createElement("restaurant-item");
+      item.restaurant = restaurant;
+      this.shadowDOM.appendChild(item);
+    });
+  }
 }
 
-customElements.define('restaurant-list', RestaurantList)
+customElements.define("restaurant-list", RestaurantList);

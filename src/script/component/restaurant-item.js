@@ -1,18 +1,18 @@
-class RestaurantItems extends HTMLElement{
-    constructor(){
-        super()
-        this.shadowDOM = this.attachShadow({
-            mode: 'open'
-        })
-    }
+class RestaurantItems extends HTMLElement {
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({
+      mode: "open",
+    });
+  }
 
-    set restaurant(restaurant){
-        this._restaurant = restaurant
-        this.render()
-    }
+  set restaurant(restaurant) {
+    this._restaurant = restaurant;
+    this.render();
+  }
 
-    render(){
-        this.shadowDOM.innerHTML = `
+  render() {
+    this.shadowDOM.innerHTML = `
         <style>
         restaurant-item {
           justify-content: center;
@@ -85,9 +85,8 @@ class RestaurantItems extends HTMLElement{
                 </div>
             </div>
             <textarea readonly> ${this._restaurant.description} </textarea> 
-        </div>`
-        
-    }
+        </div>`;
+  }
 }
 
-customElements.define('restaurant-item', RestaurantItems)
+customElements.define("restaurant-item", RestaurantItems);
