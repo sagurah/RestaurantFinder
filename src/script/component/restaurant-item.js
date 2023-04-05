@@ -66,7 +66,7 @@ class RestaurantItems extends HTMLElement{
             border: 2px solid black;
             box-shadow: 0px 2px black;
             border-radius: 20px;
-            padding: 8px;
+            padding: 8px 16px;
         }
 
         .categories > .sub-categories > span{
