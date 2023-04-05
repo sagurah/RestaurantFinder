@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    font-family: Comfortaa, sans-serif;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-bar{
+    background-color: #dbf1e9;
+    box-shadow: 0 5px black;
+    padding: 20px 75px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.app-bar:hover{
+    box-shadow: 0 2px black;
+    border-radius: 0px;
+}
+
+.app-bar > .title {
+    color: black;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
